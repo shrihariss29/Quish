@@ -1,0 +1,294 @@
+body {
+  background-color: #eaeaea;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+.home
+{
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0px;
+}
+.homep
+{
+  font-family: "Lato", sans-serif;
+  margin-bottom: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size : 20px;
+}
+.logininput
+{
+  width: 45%;
+}
+.instname
+{
+  margin-top: 5%;
+  margin-left:25%;
+  margin-right: 10%;
+  background-color:lightblue;
+  border-radius: 5%;
+  padding: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:normal;
+  width:40%;
+  font-size: 120%;
+}
+.takename
+{
+  margin-top: 2%;
+  margin-left: 0;
+  margin-right: 0;
+  background-color:lightblue;
+  border-radius: 5%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:40%;
+  font-size: 120%;
+}
+.loginform
+{
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loginbutton
+{
+  width: 30%;
+  margin-left: 35%;
+  letter-spacing: 1px;
+  font-size: 97%;
+  position: relative;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 35%;
+  margin: 15% auto;
+  padding: 20px;
+  background-color:white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  font-size: 150%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+}
+
+.answer-container {
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: large;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color:darkred;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5%;
+  padding-right: 5px;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color:red;
+}
+
+#result {
+  text-align: center;
+  font-size: 24px;
+}
+
+.checkmark {
+  color: transparent;
+  animation: checkmark 0.5s ease;
+}
+
+.cross {
+  color: transparent;
+  animation: cross 0.5s ease;
+}
+
+@keyframes checkmark {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: green;
+  }
+}
+
+@keyframes cross {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.restart-button {
+  display: inline-block;
+  background-color:chocolate;
+  color: whitesmoke;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 5%;
+  margin-bottom: 4%;
+  margin-right: 1%;
+}
+.buttonflex
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topscore
+{
+  font-size: 140%;
+}
+@media(max-width:800px) 
+{
+  button {
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: large;
+    display: block;
+    width: 50%;
+    padding: 2px;
+    background-color:darkred;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5%;
+    padding-right: 5px;
+  }
+  .topscore
+{
+  font-size: 100%;
+}
+  .home
+{
+  font-family: "Lato", sans-serif;
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+.container
+{
+  margin-top: 50%;
+  width: 60%;
+  font-size: 60%;
+}
+.restart-button
+{
+  margin-top: 50%;
+  margin-left: 35%;
+  margin-bottom: 20%;
+}
+#loginbutton
+{
+  width: 30%;
+  margin-left: 35%;
+  letter-spacing: 1px;
+  font-size: 50%;
+  position: relative;
+}
+.takename
+{
+  margin-top: 4%;
+  background-color:lightblue;
+  border-radius: 5%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 65%;
+  width:80%;
+}
+.homep
+{
+  font-family: "Lato", sans-serif;
+  margin-bottom: 2%;
+  font-size: 15px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.instname
+{
+  margin-top: 10%;
+  margin-left:2%;
+  margin-right: 2%;
+  background-color:lightblue;
+  border-radius: 5%;
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:normal;
+  width:80%;
+  font-size: 120%;
+}
+.restart-button {
+  display: inline-block;
+  background-color:chocolate;
+  color: whitesmoke;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 1%;
+  margin-right: 30%;
+}
+.buttonflex
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+}

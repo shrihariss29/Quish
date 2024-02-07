@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Numeric quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+ <form class="instname" action="/index" method="GET">
+
+    <h1 class="home">Welcome to Quish, <%= response.username%> </h1>
+    <p class="homep">Hello. This is a game where it will test your numerical ability on various feilds. The answers will be only
+        positive real numbers.
+    </p>
+    <p class="homep">And if you want to see the source code on how it is done, my github link which is given
+        in the end of the game can head you through that. But now, Let's see how much you can get this right. Have fun! </p>
+    <button type = "submit" id="loginbutton">Play!</button>
+</form>
+</body>
+</html>

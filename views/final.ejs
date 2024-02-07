@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Numeric quiz</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <script>
+    alert('Game over! Final best score: <%= totalScore %>');
+    </script>
+    <div class="buttonflex">
+    <a href="/" class="restart-button">Restart</a>
+    <a href="https://github.com/shrihariss29" target="_blank" class="restart-button">Github</a>
+    </div>
+    <h1 class="home">Thanks for attending the quiz <%= response.username %>, your score is : <%= totalScore %></h1>
+    
+    <h1 class="home">Top Scores:</h1>
+        <% people.forEach(function(person) { %>
+            <h1 class="topscore"><%= person.personname %> : <%= person.score %></h1>
+        <% }); %>
+</body>
+</html>
