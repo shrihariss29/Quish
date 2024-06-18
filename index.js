@@ -5,36 +5,48 @@ import pg from "pg";
 const app = express();
 const port = 3000;
 
-const db = new pg.Client({
+const db = new pg.Client
+(
+  {
   user: "postgres",
   host: "localhost",
   database: "World",
   password: "sHRIHARI@29",
   port: 5432,
-});
+  }
+);
 
-const human = new pg.Client({
+const human = new pg.Client
+(
+  {
   user: "postgres",
   host: "localhost",
   database: "World",
   password: "sHRIHARI@29",
   port: 5432,
-});
+  }
+);
 
-let maths = [
+let maths = 
+[ 
   { question: "", answer: "" }
 ];
 
 db.connect();
 
-db.query("SELECT * FROM gk", (err, res) => {
-  if (err) {
+db.query("SELECT * FROM gk", (err, res) => 
+{
+  if (err) 
+  {
     console.error("Error executing query", err.stack);
-  } else {
+  } 
+  else 
+  {
     maths = res.rows;
   }
   db.end();
-});
+}
+);
 
 let totalCorrect = 0;
 let currentQuestion = {};
@@ -44,57 +56,83 @@ let people = [];
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-app.get("/index", async (req, res) => {
+app.get("/index", async (req, res) => 
+{
   totalCorrect = 0;
   console.log(currentQuestion);
   await nextQuestion();
   res.render("index.ejs", { thisq: currentQuestion });
-});
+}
+);
 
-app.get("/", async (req, res) => {
+app.get("/", async (req, res) => 
+{
   res.render("login.ejs");
-});
+}
+);
 
 human.connect();
 
-app.post("/instruct", async (req, res) => {
+app.post("/instruct", async (req, res) => 
+{
   name = req.body;
   res.render("instruct.ejs", { response: name });
-});
+}
+);
 
-app.post("/submit", (req, res) => {
+app.post("/submit", (req, res) => 
+{
+  
   let ans = req.body.answer.trim();
   let isCorrect = false;
-  if (currentQuestion.answer == ans) {
+  if (currentQuestion.answer == ans) 
+  {
     totalCorrect++;
     isCorrect = true;
     nextQuestion();
-    res.render("index.ejs", {
+    res.render("index.ejs", 
+    {
       thisq: currentQuestion,
       wasCorrect: isCorrect,
       totalScore: totalCorrect,
-    });
-  } else {
-    human.query("INSERT INTO people (personname, score) VALUES($1, $2)", [name, totalCorrect], (err, response) => {
-      if (err) {
+    }
+  );
+  } 
+  else 
+  {
+    human.query("INSERT INTO people (personname, score) VALUES($1, $2)", [name, totalCorrect], (err, response) => 
+    {
+      if (err) 
+      {
         console.log(err);
-      } else {
-        human.query("SELECT * FROM people ORDER BY score DESC LIMIT 5", (err, peopleResponse) => {
-          if (err) {
+      } 
+      else 
+      {
+        human.query("SELECT * FROM people ORDER BY score DESC LIMIT 5", (err, peopleResponse) => 
+        {
+          if (err) 
+          {
             console.error("Error executing query", err.stack);
-          } else {
+          } 
+          else 
+          {
             people = peopleResponse.rows;
-            res.render("final.ejs", {
+            res.render("final.ejs", 
+            {
               totalScore: totalCorrect,
               response: name,
               people: people,
-            });
+            }
+          );
           }
-        });
+        }
+      );
       }
-    });
+    }
+  );
   }
-});
+}
+);
 
 async function nextQuestion() {
   const randomquestion = maths[Math.floor(Math.random() * maths.length)];
